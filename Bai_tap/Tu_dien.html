@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dictionary</title>
+	<script>
+		arr1=['hello','name','love','you','mom','dad'];
+		arr2=['xin chào','tên','tình yêu','bạn','mẹ','bố'];
+		function search(x){
+			for(var i=0;i<=arr1.length;i++){
+				if(x==arr1[i])
+					return arr2[i];
+			}
+			result='Khong tim thay!!!';
+			return result;
+
+		}
+	</script>
+</head>
+<body>
+	//'hello','name','love','you','mom','dad'
+	<form>
+		<input type="text" id="inputword">
+		<input type="button" id='search' value='Search' onclick="tim_kiem()">
+		<br/><br/>
+		<span id='result'></span>
+	</form>
+	<script>
+		//<input type="text" id="inputword" onkeypress="search1(event)">
+		// function search1(e) {
+		// 	if(e.keyCode == 13) {
+  		//      tim_kiem();
+  		//   }
+  		//   e.preventDefault();
+		// }
+		function tim_kiem(){
+			var x=document.getElementById('inputword').value;
+			document.getElementById('result').innerHTML=search(x);
+		}
+
+	</script>
+</body>
+</html>
